@@ -1,0 +1,62 @@
+{
+    "id": "daon-authenticator",
+    "name": "Daon TrustX Authenticator",
+    "description": "Login users with Daon TrustX identity verification.",
+    "image": "assets/images/logos/daon.svg",
+    "category": "DEFAULT",
+    "displayOrder": 16,
+    "services": [],
+    "tags": [ "OIDC" ],
+    "idp": {
+        "name": "Daon TrustX Authenticator",
+        "description": "",
+        "image": "",
+        "isPrimary": false,
+        "isFederationHub": false,
+        "homeRealmIdentifier": "",
+        "certificate": {
+            "certificates": []
+        },
+        "alias": "",
+        "idpIssuerName": "",
+        "federatedAuthenticators": {
+            "defaultAuthenticatorId": "RGFvbkF1dGhlbnRpY2F0b3I",
+            "authenticators": [
+                {
+                    "authenticatorId": "RGFvbkF1dGhlbnRpY2F0b3I",
+                    "isEnabled": true,
+                    "properties": [
+                        {
+                            "key": "daon_idp_id",
+                            "displayName": "Daon Identity Verifier",
+                            "description": "Daon Identity Verifier connection supplying the OIDC configurations.",
+                            "type": "STRING",
+                            "displayOrder": 1,
+                            "regex": ".*",
+                            "isMandatory": true,
+                            "isConfidential": false,
+                            "options": [],
+                            "defaultValue": "",
+                            "subProperties": []
+                        },
+                        {
+                            "key": "daon_login_pd",
+                            "displayName": "Login Process Definition",
+                            "description": "Daon process definition for login and password-recovery flows, as <Name:Version>.",
+                            "type": "STRING",
+                            "displayOrder": 2,
+                            "regex": ".*",
+                            "isMandatory": false,
+                            "isConfidential": false,
+                            "options": [],
+                            "defaultValue": "",
+                            "subProperties": []
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "type": "SOCIAL",
+    "templateId": "daon-authenticator"
+}

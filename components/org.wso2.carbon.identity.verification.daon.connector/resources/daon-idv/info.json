@@ -1,0 +1,10 @@
+{
+    "id": "daon-idv",
+    "name": "Daon TrustX Identity Verifier",
+    "description": "Enrol and verify user identities with Daon TrustX.",
+    "image": "assets/images/logos/daon.svg",
+    "category": "DEFAULT",
+    "displayOrder": 15,
+    "tags": [ "OIDC" ],
+    "type": "identity-provider"
+}
