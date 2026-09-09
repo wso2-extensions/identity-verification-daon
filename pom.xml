@@ -359,6 +359,7 @@
 
         <compiler-source.version>21</compiler-source.version>
         <compiler-target.version>21</compiler-target.version>
+        <project.scm.id>my-scm-server</project.scm.id>
     </properties>
 
 </project>
