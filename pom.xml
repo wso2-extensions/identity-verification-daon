@@ -21,7 +21,7 @@
 
     <groupId>org.wso2.carbon.identity.verification</groupId>
     <artifactId>org.wso2.carbon.identity.verification.daon</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
     <name>WSO2 Carbon - Daon TrustX Identity Verification Connector</name>
     <packaging>pom</packaging>
     <modules>
@@ -179,7 +179,7 @@
         <developerConnection>
             scm:git:https://github.com/wso2-extensions/identity-verification-daon.git
         </developerConnection>
-        <tag>v1.0.0</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <build>
