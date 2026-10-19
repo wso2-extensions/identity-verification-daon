@@ -32,6 +32,7 @@ import org.wso2.carbon.identity.verification.daon.connector.exception.DaonExcept
 import org.wso2.carbon.identity.verification.daon.connector.internal.DaonConnectorDataHolder;
 import org.wso2.carbon.idp.mgt.IdentityProviderManagementException;
 import org.wso2.carbon.idp.mgt.IdpManager;
+import org.wso2.carbon.idp.mgt.model.SharedIdPResolveType;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -120,7 +121,8 @@ public final class DaonReferencedIdpUtil {
             return null;
         }
         try {
-            IdentityProvider idp = idpManager.getIdPByResourceId(idpResourceId, tenantDomain, false);
+            IdentityProvider idp = idpManager.getIdPByResourceId(idpResourceId, tenantDomain, false,
+                    SharedIdPResolveType.FULL_RESOLVED);
             if (idp == null) {
                 LOG.warn(DaonExceptionMgt.errorLog(ErrorMessage.ERROR_REFERENCED_IDP_NOT_FOUND,
                         idpResourceId));

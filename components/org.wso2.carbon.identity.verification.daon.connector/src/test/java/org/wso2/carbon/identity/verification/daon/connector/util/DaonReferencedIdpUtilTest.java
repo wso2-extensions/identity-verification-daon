@@ -29,6 +29,7 @@ import org.wso2.carbon.identity.application.common.model.Property;
 import org.wso2.carbon.identity.verification.daon.connector.constants.DaonConstants;
 import org.wso2.carbon.identity.verification.daon.connector.internal.DaonConnectorDataHolder;
 import org.wso2.carbon.idp.mgt.IdpManager;
+import org.wso2.carbon.idp.mgt.model.SharedIdPResolveType;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -77,7 +78,8 @@ public class DaonReferencedIdpUtilTest {
     private void givenReferencedIdp(IdentityProvider idp) throws Exception {
 
         IdpManager idpManager = Mockito.mock(IdpManager.class);
-        Mockito.when(idpManager.getIdPByResourceId(IDP_RESOURCE_ID, TENANT_DOMAIN, false)).thenReturn(idp);
+        Mockito.when(idpManager.getIdPByResourceId(IDP_RESOURCE_ID, TENANT_DOMAIN, false,
+                SharedIdPResolveType.FULL_RESOLVED)).thenReturn(idp);
         DaonConnectorDataHolder.setIdpManager(idpManager);
     }
 
